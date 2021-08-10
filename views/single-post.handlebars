@@ -1,16 +1,26 @@
 {{> post-info post}}
 
 {{#if loggedIn}}
-<form class="comment-form">
+<div class="card">
+<form class="comment-form" id= "comment">
   <div>
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+      <div>
+              <a href="">
+                <input type="image" src="/images/commentIcon.png" width="50" height="50" name="comment"
+                  class="submit" id="">
+              </a>
+              <a href="">
+                <input type="image" src="/images/greenHeart.png" width="50" height="50" name="Like"
+                  class="upvote-btn" id="">
+              </a>
   </div>
+
 </form>
+</div>
 {{/if}}
 
 {{> comments post.comments}}

@@ -33,6 +33,35 @@ body {
 section {
   padding: 60px;
   background-color: rgb(169,194,185);
+  color: #d34959;
+}
+.post{
+  text-align: center;
+  padding: 60px;
+  background-color: rgb(169,194,185);
+  color: #d34959;
+}
+.user.name {
+  color: #d34959;
+  font-size: 60px;
+}
+.comment{
+  text-align: center;
+  padding: 60px;
+  background-color: rgb(169,194,185);
+  color: #d34959;
+}
+.post h1 {
+  font-size: 60px;
+  color: #d34959;
+}
+.post a {
+  font-size: 60px;
+  color: #d34959;
+}
+.comments {
+  padding: 60px;
+  background-color: rgb(169,194,185);
 }
 .steps {
   text-align: center;
@@ -204,6 +233,7 @@ footer div {
     height: 100%;
     font-size: 1em;
 }
+ 
 
 
 /* Style the Buttons for the Full Page Tabs Ends */
