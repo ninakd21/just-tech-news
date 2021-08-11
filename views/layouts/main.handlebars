@@ -28,28 +28,41 @@
       <div class="hero-body has-background-image">
         <img src="/images/heroBackground2.png" class="img-fluid" alt="...">
       </div>
-      {{#if loggedIn}}
       <div class="container-fluid">
         <div class="row">
           <div class="d-flex d-flex justify-content-around">
             <div class="align-items-center">
+              {{#if loggedIn}}
               <a href="/login">
-                <input type="image" src="/images/logoutDogBowl.png" width="100" height="75" name="homeButton" class="submit"
-                  id="logout">
+                <input type="image" src="/images/logoutDogBowl.png" width="100" height="75" name="homeButton"
+                  class="submit" id="logout">
               </a>
+              {{else}}
+              <a href="/login">
+                <input type="image" src="/images/signUp.png" width="100" height="75" name="homeButton" class="submit"
+                  id="login">
+              </a>
+                {{/if}}
             </div>
+
             <div class="align-items-center">
               <a href="/about-us">
                 <input type="image" src="/images/aboutUs.png" width="100" height="75" name="aboutUsButton"
                   class="submit" id="aboutus">
               </a>
-
             </div>
             <div class="align-items-center">
+               {{#if loggedIn}}
               <a href="/dashboard">
                 <input type="image" src="/images/furfileDogBowl.png" width="100" height="75" name="logInButton"
                   class="submit" id="dashboard">
               </a>
+              {{else}}
+               <a href="/login">
+                <input type="image" src="/images/logInBowl.png" width="100" height="75" name="logInButton"
+                  class="submit" id="login">
+              </a>
+                {{/if}}
             </div>
           </div>
         </div>
@@ -63,95 +76,22 @@
       <main>
         {{{ body }}}
       </main>
-      {{else}}
-
-      <div class="container-fluid">
-        <div class="row">
-          <div class="d-flex d-flex justify-content-around">
-            <div class="align-items-center">
-              <a href="/login">
-                <input type="image" src="/images/signUp.png" width="100" height="75" name="homeButton" class="submit"
-                  id="login">
-              </a>
-            </div>
-            <div class="align-items-center">
-              <a href="/about-us">
-                <input type="image" src="/images/aboutUs.png" width="100" height="75" name="aboutUsButton"
-                  class="submit" id="aboutus">
-              </a>
-
-            </div>
-            <div class="align-items-center">
-              <a href="/login">
-                <input type="image" src="/images/logInBowl.png" width="100" height="75" name="logInButton"
-                  class="submit" id="login">
-              </a>
-            </div>
-          </div>
+      <footer>
+        <div class="d-flex flex-row bd-highlight mb-6 justify-content-between">
+          <img src="/images/paw.png">
+          <div class="p-2 bd-highlight">© 2021 PuppyLove</div>
+          <a href="/homepage">
+            <div class="p-2 bd-highlight">Home</div>
+          </a>
+          <a href="/about-us">
+            <div class="p-2 bd-highlight">About Us</div>
+          </a>
+          <a href="/profile">
+            <div class="p-2 bd-highlight">Puppy Profile</div>
+          </a>
+          <img src="/images/paw.png">
         </div>
-      </div>
-      </header>
-      <br>
-      <br>
-      <main>
-        {{{ body }}}
-        </main>
-        <!--Welcome Section-->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-6">
-              <img src="images/petPic3.jpg" width="750" height="450" class="align-center">
-            </div>
-            <div class="col-1"></div>
-          </div>
-        </div>
-        <br>
-        <!-- "what you do" section -->
-        <section id="what-you-do" class="steps">
-          <img src="images/loginLogo.png">
-          <h2><span>Get Started!</span></h2><br>
-          <div>
-            <img src="images/profileIcon.png">
-            <h3><span>Create a Pet Protfile!</span></h3>
-            <p>Upload cute pet pictures, fill out a bio, and provide facts about your pet to showcase their
-              personalities!</p>
-          </div>
-          <div>
-            <img src="images/229116-200.png">
-            <h3><span>Fill Out Pet Questionnair</span></h3>
-            <p>To get the best pet friendly recommendations and get to know your community better, answer a few
-              questions!</p>
-          </div>
-          <div>
-            <img src="images/add-location.png">
-            <h3><span>Find Pet Friendly Places</span></h3>
-            <p>Attend pet friendly events, cafes, parks, and socials! Don't forget to leave a review and rate your
-              exprience.</p>
-          </div>
-          <div>
-            <img src="images/meet.png">
-            <h3><span>Meet other Pet and Pet Owners</span></h3>
-            <p>Enjoy meeting other pet owners and create a meaningful community!</p>
-          </div>
-        </section>
-
-        {{/if}}
-        <footer>
-          <div class="d-flex flex-row bd-highlight mb-6 justify-content-between">
-            <img src="/images/paw.png">
-            <div class="p-2 bd-highlight">© 2021 PuppyLove</div>
-            <a href="/homepage">
-              <div class="p-2 bd-highlight">Home</div>
-            </a>
-            <a href="/about-us">
-              <div class="p-2 bd-highlight">About Us</div>
-            </a>
-            <a href="/profile">
-              <div class="p-2 bd-highlight">Puppy Profile</div>
-            </a>
-            <img src="/images/paw.png">
-          </div>
-        </footer>
+      </footer>
   </div>
 
   {{#if loggedIn}}
