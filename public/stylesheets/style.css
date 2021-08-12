@@ -51,6 +51,18 @@ section {
   background-color: rgb(169,194,185);
   color: #d34959;
 }
+.login-form{
+  text-align: center;
+  padding: 60px;
+  background-color: rgb(169,194,185);
+  color: #d34959;
+}
+.signup-form{
+  text-align: center;
+  padding: 60px;
+  background-color: rgb(169,194,185);
+  color: #d34959;
+}
 li {
   border-style: solid;
   border-color: black;
