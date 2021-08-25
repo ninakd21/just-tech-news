@@ -19,6 +19,11 @@
     <header>
       <div class="hero-head">
         <div class="container-fluid">
+            {{#if loggedIn}}
+          <div class="title">
+            {{user.username}} 
+          </div>
+              {{/if}}
           <a href="/">
             <input type="image" src="/images/LOGO.png" width="250" height="100" class="d-inline-block align-text-top"
               id="homepage">
@@ -42,7 +47,7 @@
                 <input type="image" src="/images/signUp.png" width="100" height="75" name="homeButton" class="submit"
                   id="login">
               </a>
-                {{/if}}
+              {{/if}}
             </div>
 
             <div class="align-items-center">
@@ -52,17 +57,17 @@
               </a>
             </div>
             <div class="align-items-center">
-               {{#if loggedIn}}
+              {{#if loggedIn}}
               <a href="/dashboard">
                 <input type="image" src="/images/furfileDogBowl.png" width="100" height="75" name="logInButton"
                   class="submit" id="dashboard">
               </a>
               {{else}}
-               <a href="/login">
+              <a href="/login">
                 <input type="image" src="/images/logInBowl.png" width="100" height="75" name="logInButton"
                   class="submit" id="login">
               </a>
-                {{/if}}
+              {{/if}}
             </div>
           </div>
         </div>
