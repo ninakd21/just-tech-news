@@ -31,6 +31,10 @@ User.init(
         isEmail: true
       }
     },
+    furfile: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
