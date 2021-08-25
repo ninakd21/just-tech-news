@@ -145,7 +145,6 @@ footer div {
 
 /*Card-Section*/
 .card{
-  transform: translate(-67%,-55%);
   border-style: solid;
   border-color: black;
 }
