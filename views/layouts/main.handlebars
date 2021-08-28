@@ -18,22 +18,23 @@
   <div class="wrapper">
     <header>
       <div class="hero-head">
-        <div class="container-fluid">
-            {{#if loggedIn}}
+        <div class="container-fluid border-bottom border-dark p-2">
+          {{#if loggedIn}}
           <div class="title">
-            {{user.username}} 
+            {{user.username}}
           </div>
-              {{/if}}
+          {{/if}}
           <a href="/">
             <input type="image" src="/images/LOGO.png" width="250" height="100" class="d-inline-block align-text-top"
               id="homepage">
           </a>
         </div>
       </div>
-      <div class="hero-body has-background-image">
-        <img src="/images/heroBackground2.png" class="img-fluid" alt="...">
+
+      <div class="hero-body has-background-image img-fluid align-items-center p-4">
+        <img src="/images/backgroundNew.png" class="img-fluid align-items-center" alt="...">
       </div>
-      <div class="container-fluid">
+      <div class="container-fluid p-4  border-bottom border-dark">
         <div class="row">
           <div class="d-flex d-flex justify-content-around">
             <div class="align-items-center">
@@ -73,31 +74,28 @@
         </div>
       </div>
     </header>
-    <br>
-    <br>
-    <main>
-      </nav>
-      </header>
-      <main>
-        {{{ body }}}
-      </main>
-      <footer>
-        <div class="d-flex flex-row bd-highlight mb-6 justify-content-between">
-          <img src="/images/paw.png">
-          <div class="p-2 bd-highlight">© 2021 PuppyLove</div>
-          <a href="/homepage">
-            <div class="p-2 bd-highlight">Home</div>
-          </a>
-          <a href="/about-us">
-            <div class="p-2 bd-highlight">About Us</div>
-          </a>
-          <a href="/profile">
-            <div class="p-2 bd-highlight">Puppy Profile</div>
-          </a>
-          <img src="/images/paw.png">
-        </div>
-      </footer>
   </div>
+
+  <main>
+    {{{ body }}}
+  </main>
+
+  <footer>
+    <div class="container-fluid border-top border-dark">
+      <div class="row">
+        <div class="d-flex justify-content-center p-2">
+          <div>
+            <img src="/images/paw.png">
+          </div>
+          <div class="row align-items-center">© 2021 PuppyLove</div>
+          <div>
+            <img src="/images/paw.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
